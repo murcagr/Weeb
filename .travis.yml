@@ -7,8 +7,8 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_537b2eb27cb3_key -iv $encrypted_537b2eb27cb3_iv -in deploy_key.enc -out ./deploy_key -d
 - docker-compose build
 script:
-- docker tag weeb:latest $DOCKER_HUB_USERNAME/weeb:production
-- docker push $DOCKER_HUB_USERNAME/weeb:production
+- docker tag weeb:latest murcagr/weeb:production
+- docker push murcagr/weeb:production
 after_script:
 - docker rm -f app
 deploy:
