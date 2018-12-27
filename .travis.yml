@@ -16,7 +16,7 @@ after_script:
 deploy:
  provider: script
  skip_cleanup: true
- script: chmod 600 deploy_key && ssh -o StrictHostKeyChecking=no -i deploy_key rezedau@85.255.1.214 ./deploy.sh
+ script: sshpass -p Klop00991 ssh -o StrictHostKeyChecking=no root@85.255.1.214 /var/www/html/weeb/deploy.sh
 env:
  global:
  - secure: QLcdyfB+mWmKrztHys7fI3xDojojGasrErmUFWFsC1vX36KlpzknpHavnG/Nh+PWsIarRZ+MI/w2Ef811leWj3ObUcmSvozZRzrSst4WhJIsbVX2+18uWk5O4RAKXRgKuXZD3hN1e2xm6zA2ZmaZaO5c7gOEiNY7xCEWseHlRTs5PIEyWO6Sz1oSO+doXm4AlGju830t6vvC3Y0CtXKqAa7A9udxvD8PyeVUDFJklwugiGNecWaVJosQdAW46h5cU3lz17+aTZ6o4IQyLGNdDBTYQONo2oaFja3S41f+q9500ADHv+FCbJNp1kj7ZkKAuVCnzkeqik4MlD/1FRQN9q6QcwlxCf9ZZcPXHoWCumdOt/nU/UVeBHcKF32MI2w5LNUAVCX6VlW0y0UKJ36o8LgvTlpaWNbY+1CwTtV599E4lyl3ld2b4CSM5KKECCL4ujfe9DedM1qYhE4BTGd7db7x6ZQ6yrLUz8830qICdO0LURqH1xxrFjSEGJgMobg30pAxq/95NOqtmla1lZlJRP9WjjfAjrXYvwjUffBw9XIg/DCLePs9mmtVQuPWMvB5/k9LXAEGl8YSp8h4ZWL8lObx6xcvd2xnKAO/etEtGiC4Ie5Nrme+X/K7Lqez1GqndMzkqrN7MGX1oHWovceC/W/RAWQtzbAtKEZOCDVgMyA=
